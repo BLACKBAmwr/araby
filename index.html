@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>منصة لغتنا الأم</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@900&display=swap" rel="stylesheet">
+  <link rel="icon" href="mr.jpeg" type="image/jpeg">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+</head>
+<body>
+  <header>لغتنا الأم</header>
+
+  <nav>
+    <a href="#">الرئيسية</a>
+    <a href="about.html">من أنا؟</a>
+    <a href="contact.html">تواصل معنا</a>
+    <a href="login.html">تسجيل دخول</a>
+  </nav>
+
+  <main>
+    <h1><span class="highlight-orange">منصة</span> <span class="highlight-black">لغتنا الأم</span></h1>
+    
+    <p>كل طرق تفوق الطالب في مكان واحد</p>
+    
+    <img src="mr.jpeg" alt="صورة المعلم" class="mr-image">
+    
+    <h1 class="courses">المحاضرات المتاحة</h1>
+    
+    <div class="wave-line"></div>
+    
+ 
+<!-- HTML -->
+<div class="swiper mySwiper" style="width: 80%; margin: auto;">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="2.jpg" alt="الصف الأول الإعدادي" style="width:100%" />
+      <h2>الصف الأول الإعدادي</h2>
+      <p>شرح مبسط وشامل لجميع دروس الصف الأول الإعدادي.</p>
+      <button class="buy-btn">اشتري الآن</button>
+    </div>
+    <div class="swiper-slide">
+      <img src="3.jpg" alt="الصف الثاني الإعدادي" style="width:100%" />
+      <h2>الصف الثاني الإعدادي</h2>
+      <p>مراجعات وشرح مميز بأسلوب ممتع وفعّال.</p>
+      <button class="buy-btn">اشتري الآن</button>
+    </div>
+    <div class="swiper-slide">
+      <img src="1.jpg" alt="الصف الثالث الإعدادي" style="width:100%" />
+      <h2>الصف الثالث الإعدادي</h2>
+      <p>التحضير الكامل لامتحانات الشهادة الإعدادية.</p>
+      <button class="buy-btn">اشتري الآن</button>
+    </div>
+  </div>
+  <!-- أزرار التحكم -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <!-- نقاط التنقل -->
+  <div class="swiper-pagination"></div>
+</div>
+
+
+  </main>
+
+  <footer>© 2025 لغتنا الأم - جميع الحقوق محفوظة</footer>
+
+  <div class="whatsapp-float">
+    <a href="https://wa.me/201557995387" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="واتساب">
+    </a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script>
+ // JavaScript
+const swiper = new Swiper(".mySwiper", {
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+
+
+
+ let storedColor = localStorage.getItem('mainColor');
+if (storedColor) {
+    document.documentElement.style.setProperty('--main-color', storedColor);
+    document.getElementById('colorPicker').value = storedColor;  // تحديث قيمة الـ input باللون المخزن
+}
+
+document.getElementById('colorPicker').addEventListener('input', function(event) {
+    let selectedColor = event.target.value;
+    document.documentElement.style.setProperty('--main-color', selectedColor);
+    localStorage.setItem('mainColor', selectedColor);
+});
+
+
+  </script>
+
+</body>
+</html>
