@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>نموذج تواصل 🔥</title>
+  <style>
+    body {
+      background: #1a1a1a;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      direction: rtl;
+      color: white;
+    }
+
+    form {
+      max-width: 400px;
+      width: 100%;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(255, 75, 43, 0.6);
+    }
+
+    form h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-shadow: 0 0 8px #fff;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      text-shadow: 0 0 4px #ffbaba;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.3);
+      transition: box-shadow 0.3s ease;
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+      resize: vertical;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      box-shadow: 0 0 12px #fff, 0 0 20px #ff4b2b;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    button {
+      width: 100%;
+      background: #fff;
+      color: #ff4b2b;
+      padding: 15px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(255, 75, 43, 0.5);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    button:hover {
+      background: #ff4b2b;
+      color: white;
+      box-shadow: 0 8px 25px rgba(255, 75, 43, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <form action="/submit-form" method="POST">
+    <h2>تواصل معانا</h2>
+
+    <label for="name">الاسم:</label>
+    <input type="text" id="name" name="name" placeholder="اكتب اسمك" required />
+
+    <label for="email">البريد الإلكتروني:</label>
+    <input type="email" id="email" name="email" placeholder="اكتب بريدك الإلكتروني" required />
+
+    <label for="subject">الموضوع:</label>
+    <input type="text" id="subject" name="subject" placeholder="موضوع الرسالة" />
+
+    <label for="message">الرسالة:</label>
+    <textarea id="message" name="message" rows="5" placeholder="اكتب رسالتك هنا" required></textarea>
+
+    <button type="submit">إرسال</button>
+  </form>
+</body>
+</html>

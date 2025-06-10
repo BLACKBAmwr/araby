@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>من أنا - لغتنا الأم</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+   
+   <style>
+   .base{
+      padding-top: 120px;
+      padding-bottom: 0;
+      margin:0;
+
+   }
+   .social-sec{
+      padding-top: 40px;
+
+   }
+ .social {
+    display: flex;
+    justify-content: space-between;
+   font-size: 50px;
+    padding: 30px;
+    
+    padding-bottom: 0;
+    flex-direction: row-reverse;
+  }
+    a i:first-child  {
+      color: blue;
+    }
+  
+  a:nth-of-type(2) i {
+  color: red;
+}
+  
+  a:nth-of-type(3) i {
+  color: black;
+}
+  
+ a:nth-of-type(4) i {
+  color: pink;
+}
+   hr{
+      margin-top: 100px;
+      
+   }
+   h1{
+      Font-size: 70px;
+      color: black;
+   }
+   t
+   p{
+      color: grey;
+   }
+   
+   .name {
+      color: var(--main-color-dark)
+   }
+   
+   .whatsapp-float {
+  position: fixed;
+  bottom: 220px;
+  right: 50px;
+}
+   
+   .whatsapp-float img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (min-width: 768px)and (max-width: 1024px){
+   .whatsapp-float img{
+      width: 100px;
+  height: 100px;
+   }
+}
+
+
+
+ @media (min-width: 1025px)and (max-width: 1280px) {
+  .whatsapp-float img{
+      width: 120px;
+  height: 120px;
+   }
+}
+
+
+ @media (min-width: 1281px)and (max-width: 1440px) {
+  .whatsapp-float img{
+      width: 140px;
+  height: 140px;
+   }
+}
+  </style>
+</head>
+<body>
+
+  <header>لغتنا الأم</header>
+
+  <nav>
+   <a href="index.html">الرئيسية</a>
+    <a href="#">من أنا؟</a>
+    <a href="contact.html">تواصل معنا</a>
+    <a href="login.html">تسجيل دخول</a>
+  </nav>
+
+  <main>
+     <div class="base">
+   <h1 class="animate__animated animate__fadeInDownBig">من أنا؟</h1>
+    <p class="animate__animated animate__fadeInUpBig">
+  <span class="name">أ. محمد السيد</span>
+  معلم لغة عربية بالإسكندرية  
+  خريج كلية التربية دفعة 2022، أعمل مدرسًا للغة العربية بمدرسة صقر للغات.  
+  أتميز بتبسيط المعلومة للطلاب باستخدام الأساليب الإبداعية، خاصة تأليف الأغاني التعليمية لتسهيل حفظ القواعد والمفاهيم اللغوية.  
+  أهدف إلى جعل اللغة العربية مادة محببة وسهلة من خلال بيئة تعليمية ممتعة وتفاعلية.  
+  انضم إلينا فكل خطوة نجاح، وكل عمل يرتقي إلى الهدف.
+</p>
+        </div>
+     <div class="social-sec">
+      <hr color="purple" width="900px" align="center"/>
+    
+    <div class="social">
+       
+    <a href="https://www.facebook.com/share/1CY9Y1nni7/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    
+    <a href="https://youtube.com/@lo8tnaarabic?si=a0H1iuciaW51ApRG" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    
+    <a href="https://www.tiktok.com/@mohamed.elsayed7741?_t=ZS-8wu045J9Mcp&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+    
+    <a href="https://www.instagram.com/m.sekoow18?igsh=MXgxMjMwM3YyYjJicA%3D%3D&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+     </div>
+  </main>
+
+  <footer>© 2025 لغتنا الأم - جميع الحقوق محفوظة</footer>
+
+   <div class="whatsapp-float">
+    <a href="https://wa.me/201557995387" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="واتساب">
+    </a>
+  </div>
+   <script>
+ let storedColor = localStorage.getItem('mainColor');
+if (storedColor) {
+    document.documentElement.style.setProperty('--main-color', storedColor);
+    document.getElementById('colorPicker').value = storedColor;  // تحديث قيمة الـ input باللون المخزن
+}
+
+document.getElementById('colorPicker').addEventListener('input', function(event) {
+    let selectedColor = event.target.value;
+    document.documentElement.style.setProperty('--main-color', selectedColor);
+    localStorage.setItem('mainColor', selectedColor);
+});
+
+
+
+   </script>
+</body>
+</html>

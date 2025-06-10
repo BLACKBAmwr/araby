@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>تسجيل الدخول - لغتنا الأم</title>
+  <link rel="stylesheet" href="style.css" />
+   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<style>
+.form {       display: flex;       flex-direction: column;       gap: 10px;       max-width: 450px;       padding: 20px;       border-radius: 20px;       position: relative;       color: #fff;       border: 1px solid #333;       margin: 500px auto;       transform: scale(1.5);       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.95);        width: 100%;       height: 100%;       background: radial-gradient(           circle farthest-side at 0% 50%,           var(--main-color) 23.5%,           rgba(240, 166, 17, 0) 0         )         21px 30px,         radial-gradient(           circle farthest-side at 0% 50%,           #b71 24%,           rgba(240, 166, 17, 0) 0         )         19px 30px,         linear-gradient(           var(--main-color) 14%,           rgba(240, 166, 17, 0) 0,           rgba(240, 166, 17, 0) 85%,           var(--main-color) 0         )         0 0,         linear-gradient(           150deg,           var(--main-color) 24%,           #b71 0,           #b71 26%,           rgba(240, 166, 17, 0) 0,           rgba(240, 166, 17, 0) 74%,           #b71 0,           #b71 76%,           var(--main-color) 0         )         0 0,         linear-gradient(           30deg,           var(--main-color) 24%,           #b71 0,           #b71 26%,           rgba(240, 166, 17, 0) 0,           rgba(240, 166, 17, 0) 74%,           #b71 0,           #b71 76%,           var(--main-color) 0         )         0 0,         linear-gradient(90deg, #b71 2%, var(--main-color) 0, var(--main-color) 98%, #b71 0%) 0 0 var(--main-color);       background-size: 40px 60px;     }      .title {       font-size: 35px;       font-weight: 600;       letter-spacing: -1px;       position: relative;       display: flex;       align-items: center;       padding-right: 30px;       color: white;     }      .title::before {       width: 22px;       height: 22px;     }      .title::after {       width: 22px;       height: 22px;       animation: pulse 1s linear infinite;     }      .title::before,     .title::after {       position: absolute;       content: "";       height: 20px;       width: 20px;       border-radius: 50%;       right: 0px;       background-color: white;     }      .message,     .signin {       font-size: 17px;       color: rgba(255, 255, 255, 0.7);     }      .signin {       text-align: center;     }      .signin a:hover {       text-decoration: underline royalblue;     }      .signin a {       color: white;     }      .flex {       display: flex;       gap: 10px;       width: 100%;       margin: auto;       flex-wrap: wrap;     }      .form label {       position: relative;       width: 100%;       margin: auto;     }      .form label .input {       background-color: #333;       color: #fff;       width: 90%;       padding: 20px 5px 5px 10px;       outline: 0;       border: 1px solid rgba(105, 105, 105, 0.397);       border-radius: 10px;       text-align: right;     }      .form label .input + span {       color: rgba(255, 255, 255, 0.5);       position: absolute;       right: 10px;       top: 0px;       font-size: 0.9em;       cursor: text;       transition: 0.3s ease;     }      .form label .input:placeholder-shown + span {       top: 12.5px;       font-size: 0.9em;       right: 10px;     }      .form label .input:focus + span,     .form label .input:valid + span {       color: #00bfff;       top: 0px;       font-size: 0.7em;       font-weight: 600;       right: 10px;     }      .input {       font-size: medium;     }      .submit {       border: none;       outline: none;       padding: 10px 20px;       border-radius: 10px;       color: #fff;       font-size: 16px;       background-color: #F737FF;       margin: 10px;       font-family: 'Cairo', sans-serif;       position: relative;       overflow: hidden;       cursor: pointer;       transition: color 0.3s, font-size 0.3s;       z-index: 1;     }      /* الطبقة المتحركة */     .submit::before {       content: '';       position: absolute;       top: 0;       right: 0;       width: 100%;       height: 100%;       background: var(--main-color);       z-index: -1;       transform: translateX(100%);       transition: transform 0.5s ease;     }      /* نستخدم blend mode عشان نخلي الطبقة تمر من ورا النص */     .submit {       position: relative;       z-index: 2;     }      /* حركة عند الهوفر */     .submit:hover::before {       transform: translateX(0);     }      /* تنسيق عند الهوفر */     .submit:hover {       border: 2px #F737FF solid;       box-shadow: 0 5px 15px #F737FF;       color: #F737FF;       font-size: 18px;       font-weight: bold;       z-index: 999;     }      @keyframes pulse {       from {         transform: scale(0.9);         opacity: 1;       }        to {         transform: scale(1.8);         opacity: 0;       }     } 
+
+
+
+
+
+
+ @media (min-width: 768px)and (max-width: 1024px){
+  .form{
+    transform: scale(1.2);
+  }
+ }  
+
+
+@media (min-width: 1025px)and (max-width: 1280px) {
+  .form{
+    transform: scale(1.4);
+  }
+}
+  </style>
+</head>
+<body>
+  <header>لغتنا الأم</header>
+
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">من أنا؟</a>
+    <a href="contact.html">تواصل معنا</a>
+    <a href="login.html">تسجيل دخول</a>
+  </nav>
+
+<form id="loginForm" class="form animate__animated animate__zoomInUp">
+  <p class="title">تسجيل دخول</p>
+     
+  <div class="flex">
+    <label>
+      <input id="loginEmail" class="input" type="email" required>
+      <span>رقم الهاتف او البريد الالكتروني</span>
+    </label>
+  </div>
+
+  <div class="flex">
+    <label>
+      <input id="loginPassword" class="input" type="password" required>
+      <span>كلمة السر</span>
+    </label>
+  </div>
+
+  <p id="loginError" style="color: red; text-align: center;"></p>
+
+  <button class="submit" type="submit">تسجيل دخول</button>
+  <p class="signin">هل لا تمتلك حساب؟ <a href="register.html"> إنشاء حساب</a></p>
+</form>
+
+
+  <footer>© 2025 لغتنا الأم - جميع الحقوق محفوظة</footer>
+  
+  <div class="whatsapp-float">
+    <a href="https://wa.me/201557995387" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="واتساب">
+    </a>
+  </div>
+  <script>
+  document.getElementById('loginForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const enteredEmail = document.getElementById('loginEmail').value.trim();
+    const enteredPassword = document.getElementById('loginPassword').value;
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // التحقق من admin
+    if (enteredEmail === "admin@example.com" && enteredPassword === "secret123") {
+      localStorage.setItem("isLoggedIn", "true");
+      window.location.href = "dashboard-secret111.html";
+      return;
+    }
+
+    // التحقق من المستخدمين المسجلين
+    const matchedUser = users.find(user => 
+      (user.email === enteredEmail || user.phone === enteredEmail) && 
+      user.password === enteredPassword
+    );
+
+    if (matchedUser) {
+      alert(`مرحبًا ${matchedUser.firstName}!`);
+      window.location.href = 'index.html'; 
+    } else {
+      document.getElementById('loginError').textContent = 'بيانات الدخول غير صحيحة';
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+   let storedColor = localStorage.getItem('mainColor');
+if (storedColor) {
+    document.documentElement.style.setProperty('--main-color', storedColor);
+    document.getElementById('colorPicker').value = storedColor;  // تحديث قيمة الـ input باللون المخزن
+}
+
+document.getElementById('colorPicker').addEventListener('input', function(event) {
+    let selectedColor = event.target.value;
+    document.documentElement.style.setProperty('--main-color', selectedColor);
+    localStorage.setItem('mainColor', selectedColor);
+});
+
+</script>
+
+
+</body>
+</html>
