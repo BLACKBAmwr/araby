@@ -17,6 +17,7 @@
   }
  }  
 </style>
+
 </head>
 <body>
 <header>لغتنا الأم</header>
@@ -24,7 +25,7 @@
 <a href="index.html">الرئيسية</a>
 <a href="about.html">من أنا؟</a>
 <a href="#">تواصل معنا</a>
-<a href="login.html">تسجيل دخول</a>
+<a id="acc" href="login.html">تسجيل دخول</a>
 </nav>
 <form class="form animate__animated animate__zoomInUp">
 <p class="title">تواصل معنا</p>
@@ -81,18 +82,29 @@ window.open(url, '_blank').focus();
 
 
 
- let storedColor = localStorage.getItem('mainColor');
+ // مراقبة تغير اللون عبر localStorage
+window.addEventListener('storage', function (e) {
+  if (e.key === 'mainColor') {
+    document.documentElement.style.setProperty('--main-color', e.newValue);
+    document.getElementById('colorPicker').value = e.newValue;
+  }
+});
+
+let storedColor = localStorage.getItem('mainColor');
 if (storedColor) {
     document.documentElement.style.setProperty('--main-color', storedColor);
-    document.getElementById('colorPicker').value = storedColor;  // تحديث قيمة الـ input باللون المخزن
+    document.getElementById('colorPicker').value = storedColor;
 }
 
 document.getElementById('colorPicker').addEventListener('input', function(event) {
     let selectedColor = event.target.value;
     document.documentElement.style.setProperty('--main-color', selectedColor);
-    localStorage.setItem('mainColor', selectedColor);
+    localStorage.setItem('mainColor', selectedColor);  // تخزين اللون في localStorage
 });
 
+
 </script>
+
+<script src="auth-status.js"></script>
 </body>
 </html>
